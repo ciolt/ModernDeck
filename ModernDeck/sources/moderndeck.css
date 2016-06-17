@@ -6627,10 +6627,11 @@ ul.tweet-stats:nth-child(2) {
     color: #20C9DF;
 }
 
-/* universal accent color CSS selector */
-.more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .spinner-layer, .spinner-default, a:not(.list-account):not(.js-column-back):not(.column-header-link):focus, .more-tweets-btn-container--loading .more-tweets-btn:before, .mtd-nd-header-image, .is-new .column-message:before, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative), .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .js-toggle-button:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .toggle-switch-input:checked+.toggle-switch-label:after, .js-column.is-new .column-header:after, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):before, .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .toggle-switch-input:checked+.toggle-switch-label:before, .btn:focus, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before,.btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-negative) {
+/* universal default accent color CSS selector *//* dynamically now added via JavaScript
+
+.more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .spinner-layer, .spinner-default, a:not(.list-account):not(.js-column-back):not(.column-header-link):focus, .more-tweets-btn-container--loading .more-tweets-btn:before, .mtd-nd-header-image, .is-new .column-message:before, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative), .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .js-toggle-button:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .toggle-switch-input:checked+.toggle-switch-label:after, .js-column.is-new .column-header:after, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):before, .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .toggle-switch-input:checked+.toggle-switch-label:before, .btn:focus, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .compose-content:after, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before,.btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-negative), input[type="checkbox"]:checked:before, input[type="radio"]:checked:before {
 	color: #49cad8;
-}
+} */
 
 .column-header-link:last-of-type {
     background: transparent;
@@ -6931,4 +6932,14 @@ p[lang="ar"] {
 
 .scroll-conversation .js-replies-before .js-media-preview-container.margin-vm,.scroll-conversation .js-replies-to .js-media-preview-container.margin-vm {
 	padding-left:53px
+}
+
+.compose-content:after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: -100%;
+    right: -100%;
+    height: 1px;
+    box-shadow: 0 0 1.5rem 1.5rem currentColor;
 }

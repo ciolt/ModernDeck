@@ -40,6 +40,13 @@ var body = $(document.body);
 var html = $(document.querySelector("html")); // Only 1 result; faster to find
 
 var welcomeScreenHtml = '<div class="mdl-content horizontal-flow-container"><div style="width:100%"class="l-column mdl-column mdl-column-lrg"><div class="l-column-scrollv scroll-v	scroll-alt"><h1>New in ModernDeck 6.0</h1><h2>Themes</h2><header class="js-column-header js-action-header column-header mtd-colours-demo"><i class="pull-left margin-hs column-type-icon icon icon-home"></i><h1 class="column-title txt-ellipsis"><span class="column-head-title">Home</span><span class="attribution txt-mute txt-sub-antialiased">@dangeredwolf</span></h1><a class="js-action-header-button column-header-link column-settings-link"><i class="icon icon-sliders"></i></a></header><p>People\'s personalities are far more than just black and white. Make your TweetDeck experience truly personal with a variety of styles to suit whatever your tastes might be. This and many of the other options are adjustable with <i class="icon icon-mtd-settings"></i><b>ModernDeck Settings</b></p><h2>Refreshed Icons</h2><br><i class="icon icon-tweetdeck icon-xxlarge"></i><i class="icon icon-moderndeck icon-xxlarge"></i><i class="icon icon-hashtag icon-xxlarge"></i><i class="icon icon-retweet icon-xxlarge"></i><i class="icon icon-mtd-settings icon-xxlarge"></i><p style="padding-top:0">As of this release, 100% of icons are either created inhouse for ModernDeck, or are borrowed from the material design icon library. This includes the new Retweet icon, which was obvious from the beginning that an inhouse solution was mandatory.</p><h2>Refreshed UI</h2><p style="padding-top:0">ModernDeck 6.0 has a refreshed UI, taking advantage of an all-new edge-to-edge design that snaps to the left side. This helps take better advantage of screen real estate while still being elegant to use, and isn\'t a bad match with ModernDeck\'s navigation drawer.</p><h2>Tweet Shortener Assistant</h2><p style="padding-top:0">Have you ever dealt with a moment where you\'re just barely over the 140 character limit and need to cut down the size a bit? In ModernDeck 6.0, we have you covered. If you go over the 140 character limit, we\'ll prompt you with suggestions of what ways it detects will help shorten your tweet. This uses a number of algorithms such as checking for excess spacing and punctuation, to more advanced ones such as detecting and replacing applicable letters with liguatures, a Unicode feature that allows combining of certain letters to replace 2, 3, or sometimes even 4 characters, into what Twitter registers as just 1 character, and oftentimes looks about the same. All of these are suggestions, so you can click on the one you want, and you\'ll get no more, no less, than you asked for. Then you can finally send that Tweet, and you\'ve saved some precious time.</p><h3>Hearts or Stars</h3><p style="padding-top:0">ModernDeck allows you to pick between hearts and stars. The new default is hearts.</p><h3>Change How the Scroll Bar Looks</h3><p style="padding-top:0">In ModernDeck 6.0, you now have the option to change the scroll bar\'s appearance, such as either making it narrower, or making it never appear outright, to help build a cleaner TweetDeck experience to your specification.</p><h3>A New Option for dealing with Sensitive Media</h3><p style="padding-top:0">ModernDeck 6.0 also introduces another new feature, which changes the workflow of dealing with sensitive media, if you have it enabled to ask beforehand. Before, you had to click a tiny "View" link beforehand. Now, simply click anywhere on the designated background, and it will open up a preview of the image, as expected, but the thumbnail itself never shows content marked as sensitive.</p><h3>Faster and More Reliable CSS Extension Engine</h3><p style="padding-top:0">Building a truly versatile theming system wasn\'t as easy as slapping a feature on top of the old codebase. It\'s possible to do it that way, but it\'d hurt performance by creating extra overhead created by having to load all themes into memory at once, only to render one. Much of ModernDeck\'s CSS/UI codebase, kept in one single CSS file, has been broken up and componentified into separate silos, called CSS extensions, and besides critical system extensions, most of these extensions can be swapped in or out at any time, making it easier for the browser to discard an old theme, and load a new theme into memory, all transparently, in real-time, with virtually no hiccup on average, modern hardware. Any UI tweaks from themes to hearts to even more are now all extensions that run on top of ModernDeck. This architecture carries through much of the system now. For example, all animations are kept in animations.css. By keeping similar items in the same place, it makes it easier for the CSS to reference, as well as making it easier to develop ModernDeck in the future. This took an enormous amount of work, but now we\'re left with a more functional, stable, as well as modular ModernDeck.</p></div></div></div>';
+
+var abstractColorCSS = function (hexColor) {
+	return `.more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .spinner-layer, .spinner-default, a:not(.list-account):not(.js-column-back):not(.column-header-link):focus, .more-tweets-btn-container--loading .more-tweets-btn:before, .mtd-nd-header-image, .is-new .column-message:before, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative), .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .js-toggle-button:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .toggle-switch-input:checked+.toggle-switch-label:after, .js-column.is-new .column-header:after, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):before, .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .toggle-switch-input:checked+.toggle-switch-label:before, .btn:focus, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .compose-content:after, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before,.btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-negative), input[type="checkbox"]:checked:before, input[type="radio"]:checked:before, .radio > input[type="radio"]:checked:after {
+		color: ${hexColor};
+	}`
+}
+
 // Asks MTDLoad for the storage
 window.postMessage({
 	type: "getStorage"
@@ -169,7 +176,31 @@ function loadPreferences() {
 		html.addClass("mtd-acc-focus-ring");
 	else
 		setPref("mtd_outlines",false);
-
+	
+	if (getPref("mtd_theme_color") !== "" && getPref("mtd_theme_color") !== null && typeof getPref("mtd_theme_color") !== "undefined") {
+		if (!document.querySelector("#theme-color-stylesheet"))
+			head.append(
+				make("style")
+				.attr("type", "text/css")
+				.attr("id", "theme-color-stylesheet")
+				.html(
+					abstractColorCSS(
+						getPref("mtd_theme_color")
+					)
+				)
+			);
+	} else {
+		if (!document.querySelector("#theme-color-stylesheet"))
+			head.append(
+				make("style")
+				.attr("type", "text/css")
+				.attr("id", "theme-color-stylesheet")
+				.html(
+					abstractColorCSS("#00B8D4") // cyan!
+				)
+			);
+	}
+	
 	if (getPref("mtd_theme") !== "" && getPref("mtd_theme") !== null && typeof getPref("mtd_theme") !== "undefined")
 		enableStylesheetExtension(getPref("mtd_theme"));
 
@@ -392,6 +423,14 @@ function PrefsListener() {
 			enableStylesheetExtension($("#mtd-theme-control option:selected").val() || "default");
 		}
 
+		if (localStorage.mtd_theme_color !== $("#mtd-theme-color-control option:selected").val()) {
+			setPref("mtd_theme_color",$("#mtd-theme-color-control option:selected").val());
+			
+			document.querySelector("#theme-color-stylesheet").innerHTML = abstractColorCSS(
+				$("#mtd-theme-color-control option:selected").val()
+			);
+		}
+
 		if ($("#mtd-scrollbar-style option:selected").length > 0 && localStorage.mtd_scrollbar_style !== $("#mtd-scrollbar-style option:selected").val()) {
 			disableStylesheetExtension(getPref("mtd_scrollbar_style"));
 			setPref("mtd_scrollbar_style",$("#mtd-scrollbar-style option:selected").val());
@@ -412,61 +451,114 @@ function MTDSettings() {
 			var mtdsettingsmodalinner = $("#settings-modal .mdl .mdl-inner");
 			$("#settings-modal .mdl .js-header-title").removeClass("js-header-title");
 			$("#settings-modal .mdl .mdl-header-title").html("ModernDeck Settings");
-			mtdsettingsmodalinner.html('<div class="mdl-content js-mdl-content horizontal-flow-container"> <div class="l-column mdl-column mdl-column-sml"> <div class="l-column-scrollv scroll-v	scroll-alt "> <ul class="lst-group js-setting-list">\
-			<li id="mtd-appearance-li"class="selected"><a href="#"class="list-link" id="mtd_settings_appearance_button" data-action="general"><strong>Appearance</strong></a></li>\
-			\
-			<li id="mtd-accessibility-li"><a href="#"class="list-link" id="mtd_settings_accessibility_button" data-action="general"><strong>Accessibility</strong></a></li>\
-			\
-			<li id="mtd-about-li"><a href="#"class="list-link" id="mtd_settings_about_button" data-action="general"><strong>About</strong></a></li>\
-			\
-			\
-			</ul> </div> </div> <div class="l-column mdl-column mdl-column-lrg"> <div class="l-column-scrollv scroll-v	scroll-alt mdl-col-settings">\
-			\
-			\
-			<form action="#" id="mtd-appearance-form" accept-charset="utf-8"class="frm"><fieldset id="general_settings"><div class="control-group" style="padding-top:10px;">\
-			<label class="checkbox">Use rounded profile pictures<input type="checkbox" checked="checked" id="mtd-round-avatars-control"></label>\
-			<label class="checkbox">Use alternate sensitive media workflow<input type="checkbox" checked="checked" id="mtd-sensitive-alt"></label>\
-			<label class="checkbox">Use Hearts instead of Stars<input type="checkbox" checked="checked" id="mtd-hearts"></label>\
-			<label class="control-label">Theme\
-			<select id="mtd-theme-control" type="select">\
-			<option value="default" selected="selected">Default</option>\
-			<optgroup label="Complete Themes">\
-			<option value="paper">Paper</option>\
-			<option value="amoled">AMOLED</option>\
-			</optgroup><optgroup label="Complementary Themes">\
-			<option value="grey">Grey</option>\
-			<option value="red">Red</option>\
-			<option value="pink">Pink</option>\
-			<option value="orange">Orange</option>\
-			<option value="violet">Violet</option>\
-			<option value="teal">Teal</option>\
-			<option value="green">Green</option>\
-			<option value="yellow">Yellow</option>\
-			<option value="cyan">Cyan</option>\
-			<option value="black">Black</option>\
-			<option value="blue">Blue</option>\
-			</optgroup></select>\
-			\
-			\
-			\
-			\
-			<label class="control-label">Scroll Bar Style<select id="mtd-scrollbar-style" type="select">\
-			<option value="default" selected="selected">Default</option>\
-			<option value="scrollbarsnarrow">Narrow</option>\
-			<option value="scrollbarsnone">Hidden</option>\
-			</select></label></label></div></fieldset></form>\
-			\
-			<form action="#" id="mtd-accessibility-form" accept-charset="utf-8"class="frm" style="display:none;"><fieldset id="general_settings"><label class="checkbox">Always show outlines on focused items<input type="checkbox" checked="checked" id="mtd-outlines-control"> </label></fieldset></form>\
-			\
-			<form action="#" id="mtd-about-form" accept-charset="utf-8"class="frm" style="display:none;"><fieldset id="general_settings"><i class="icon icon-moderndeck mtd-logo"></i><h1 class="list-placeholder mtd-about-title">ModernDeck</h1><h2 class="mtd-version-title">You\'re running version ' + SystemVersion + '</h2><div class="mdl-links" style="margin-bottom:-10px"> <a href="https://dangeredwolf.com/TweetDeckEnhancer/privacy.txt" style="display:none" target="_blank">Privacy Policy</a> </div></fieldset></form>\
-			\
-			</div> </div> </div>');
+			mtdsettingsmodalinner.html(`<div class="mdl-content js-mdl-content horizontal-flow-container">
+				<div class="l-column mdl-column mdl-column-sml">
+					<div class="l-column-scrollv scroll-v	scroll-alt ">
+						<ul class="lst-group js-setting-list">
+							<li id="mtd-appearance-li" class="selected">
+							<a href="#" class="list-link" id="mtd_settings_appearance_button" data-action="general"><strong>Appearance</strong></a>
+							</li>
+							<li id="mtd-accessibility-li">
+							<a href="#" class="list-link" id="mtd_settings_accessibility_button" data-action="general"><strong>Accessibility</strong></a>
+							</li>
+							<li id="mtd-about-li">
+							<a href="#" class="list-link" id="mtd_settings_about_button" data-action="general"><strong>About</strong></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="l-column mdl-column mdl-column-lrg">
+					<div class="l-column-scrollv scroll-v	scroll-alt mdl-col-settings">
+						<form action="#" id="mtd-appearance-form" accept-charset="utf-8" class="frm">
+							<fieldset id="general_settings">
+								<div class="control-group" style="padding-top:10px;">
+									<label class="checkbox">Use rounded profile pictures
+										<input type="checkbox" checked="checked" id="mtd-round-avatars-control">
+									</label>
+									<label class="checkbox">Use alternate sensitive media workflow
+										<input type="checkbox" checked="checked" id="mtd-sensitive-alt">
+									</label>
+									<label class="checkbox">Use Hearts instead of Stars
+										<input type="checkbox" checked="checked" id="mtd-hearts">
+									</label>
+									<label class="control-label">Theme
+										<select id="mtd-theme-control" type="select">
+											<option value="default" selected="selected">Default</option>
+											<optgroup label="Complete Themes">
+												<option value="paper">Paper</option>
+												<option value="amoled">AMOLED</option>
+											</optgroup>
+											<optgroup label="Complementary Themes">
+												<option value="grey"	>Grey		</option>
+												<option value="red"		>Red		</option>
+												<option value="pink"	>Pink		</option>
+												<option value="orange"	>Orange		</option>
+												<option value="violet"	>Violet		</option>
+												<option value="teal"	>Teal		</option>
+												<option value="green"	>Green		</option>
+												<option value="yellow"	>Yellow		</option>
+												<option value="cyan"	>Cyan		</option>
+												<option value="black"	>Black		</option>
+												<option value="blue"	>Blue		</option>
+											</optgroup>
+										</select>
+									</label>
+									<label class="control-label">Complementary Color
+										<select id="mtd-theme-color-control" type="select">
+											<option value="#FF1744">Red			</option>
+											<option value="#FF4081">Pink		</option>
+											<option value="#AA00FF">Purple		</option>
+											<option value="#651FFF">Deep Purple	</option>
+											<option value="#536DFE">Indigo		</option>
+											<option value="#2979FF">Blue		</option>
+											<option value="#00B0FF">Light Blue	</option>
+											<option value="#00B8D4" selected="selected">Cyan		</option>
+											<option value="#00BFA5">Teal		</option>
+											<option value="#00C853">Green		</option>
+											<option value="#64DD17">Light Green	</option>
+											<option value="#AEEA00">Lime		</option>
+											<option value="#FFD600">Yellow		</option>
+											<option value="#FFAB00">Amber		</option>
+											<option value="#FF9100">Orange		</option>
+											<option value="#FF3D00">Deep Orange	</option>
+											<option value="#EEEEEE">White		</option>
+											<option value="#9E9E9E">Grey		</option>
+											<option value="#000000">Black		</option>
+										</select>
+									</label>
+									<label class="control-label">Scroll Bar Style
+										<select id="mtd-scrollbar-style" type="select">
+											<option value="default" selected="selected">Default</option>
+											<option value="scrollbarsnarrow">Narrow</option>
+											<option value="scrollbarsnone">Hidden</option>
+										</select>
+									</label>
+								</div>
+							</fieldset>
+						</form>
+						<form action="#" id="mtd-accessibility-form" accept-charset="utf-8" class="frm" style="display:none;">
+							<fieldset id="general_settings">
+								<label class="checkbox">Always show outlines on focused items
+									<input type="checkbox" checked="checked" id="mtd-outlines-control">
+								</label>
+							</fieldset>
+						</form>
+						<form action="#" id="mtd-about-form" accept-charset="utf-8" class="frm" style="display:none;">
+							<fieldset id="general_settings"><i class="icon icon-moderndeck mtd-logo"></i>
+								<h1 class="list-placeholder mtd-about-title">ModernDeck</h1>
+								<h2 class="mtd-version-title">You're running version ${SystemVersion}</h2>
+							</fieldset>
+						</form>
+					</div>
+				</div>
+			</div>`);
 
 			$("#mtd-round-avatars-control").attr("checked",getPref("mtd_round_avatars"));
 			$("#mtd-sensitive-alt").attr("checked",getPref("mtd_sensitive_alt"));
 			$("#mtd-outlines-control").attr("checked",getPref("mtd_outlines"));
 			$("#mtd-hearts").attr("checked",getPref("mtd_hearts"));
 			$("#mtd-theme-control").val(getPref("mtd_theme"));
+			$("#mtd-theme-color-control").val(getPref("mtd_theme_color"));
 			$("#mtd-scrollbar-style").val(getPref("mtd_scrollbar_style"));
 
 			PrefsListener();
