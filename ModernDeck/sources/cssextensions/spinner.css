@@ -52,7 +52,7 @@
 }
 
 body.scroll-v .spinner-layer {
-	border-color:#26a69a
+	border-color:currentColor;
 }
 
 .spinner-layer {

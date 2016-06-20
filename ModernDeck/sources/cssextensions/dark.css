@@ -186,15 +186,10 @@ optgroup,
 }
 
 .column-header,
-.column-header-temp
+.column-header-temp,
+.app-columns:before
 {
-	background:linear-gradient(#263238,#263238)
-}
-
-.is-new .column-header,
-.is-new .column-header-temp
-{
-	background:linear-gradient(#263238,#0E4B50)
+	background: #263238;
 }
 
 .txt-mute a:not(:focus):not(.tweet-action):not([data-action]),
@@ -604,7 +599,7 @@ select,
 
 .spinner-layer
 {
-	border-color:#26a69a
+	border-color:currentColor
 }
 
 .startflow ::selection

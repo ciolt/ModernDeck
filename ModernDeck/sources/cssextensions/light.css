@@ -195,7 +195,6 @@ html .btd-grayscale_notification_icons i.icon.activity-indicator
 }
 
 .js-account-manager-container,
-.status-message,
 .tooltip-inner
 {
   background:#f8f8f8
@@ -276,6 +275,12 @@ html .btd-grayscale_notification_icons i.icon.activity-indicator
 	color:#0EC5D5
 }
 
+.status-message
+{
+    color: rgba(255, 255, 255, .94);
+    background-color: rgba(47, 47, 47, 0.8);
+}
+
 .btn-compose:not(.js-hide-drawer),
 .btn-compose:not(.js-hide-drawer):hover,
 .btn-compose:not(.js-hide-drawer):focus
@@ -336,12 +341,6 @@ html:not(.mtd-dark-media-previews) .med-tweet,
 .contributor-adder-block
 {
 	background:#F9F9F9
-}
-
-.is-new .column-header,
-.is-new .column-header-temp
-{
-	/* background:linear-gradient(#03A9F4,#00BCD4) */
 }
 
 .contributor-row.contributor-focus
@@ -709,17 +708,6 @@ textarea::placeholder
 .mtd-nav-drawer
 {
 	background:#fbfbfb
-}
-
-.spinner-layer,.spinner-default
-{
-	border-color:#00BCD4
-}
-
-.facet-type.is-active,
-.facet-type:active
-{
-	background:#58CDDB
 }
 
 .stream-item.is-actionable .tweet-action,
