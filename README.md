@@ -13,7 +13,7 @@ The ready-to-install extension is available in the [Releases](https://github.com
 
 |![](/Docs/Images/Chrome Sideloading 1.png) Open the Chrome Menu at the top right, find "More Tools," and click "Extensions." |![](/Docs/Images/Chrome Sideloading 2.png) Tick the checkbox next to Developer Tools at the top-right corner of the Extensions page. |![](/Docs/Images/Chrome Sideloading 3.png) Click "Load unpacked extension..." |
 |-----------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|---------------------------------|
-| ![](/Docs/Images/Chrome Sideloading 4.png) **Find the folder where the extension is located.** |![gold star for you!](/Docs/Images/Chrome Sideloading 5.png)| |
+| ![](/Docs/Images/Chrome Sideloading 4.png) **Find the folder where the extension is located.** |![gold star for you!](/Docs/Images/Chrome Sideloading 5.png) **Finished.**| |
 
 ## Opera
 
