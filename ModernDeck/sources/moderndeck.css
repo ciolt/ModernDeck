@@ -7159,10 +7159,28 @@ p[lang="ar"] {
 	padding: 0 10px;
 	line-height: 50px;
 	box-shadow: 0 1px 10px rgba(17,17,17,.35);
-	position: absolute;
+	position: fixed;
 	left: 0;
 	right: 0;
 	top: 0;
+}
+
+.app-columns:after {
+    content: '';
+    width: 100vw;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    white-space: normal;
+    border-right: none!important;
+    padding-top: 19px;
+    padding-left: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: left;
 }
 
 .media-image > .compose-media-grid-remove:before, .compose .compose-media-bar-holder:not(.mtd-out-of-space-suggestions) .js-media-added .compose-media-bar:before {
