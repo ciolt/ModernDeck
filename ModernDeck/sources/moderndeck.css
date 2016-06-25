@@ -2537,6 +2537,7 @@ a .column-title-back .icon:after {
 	top:0;
 	left:-270px;
 	height:100%;
+	z-index: 10;
 	margin-right:0;
 	overflow:hidden
 }
