@@ -2175,23 +2175,23 @@ a .column-title-back .icon:after {
 }
 
 .tweet-button {
-	width:40px;
-	height:40px;
+	width:48px;
+	height:48px;
 	font-size:18px;
 	text-align:left;
-	margin-top:-2px;
-	margin-left:45px;
+	margin-top:66px;
+	margin-left:8px;
 	border-radius:32px;
 	-webkit-transform:scale(0);
 	    -ms-transform:scale(0);
 	        transform:scale(0);
-	z-index:5
+	z-index:5;
+	padding-left: 9px;
+    padding-top: 2px;
 }
 
 .tweet-button>i {
 	font-size:30px;
-	margin-left:-5px;
-	margin-top:-3px
 }
 
 .tweet-button>i:before {
@@ -7165,7 +7165,7 @@ p[lang="ar"] {
 	top: 0;
 }
 
-.media-image > .compose-media-grid-remove:before, .compose .js-media-added .compose-media-bar:before {
+.media-image > .compose-media-grid-remove:before, .compose .compose-media-bar-holder:not(.mtd-out-of-space-suggestions) .js-media-added .compose-media-bar:before {
     content: '';
     position: absolute;
     top: -1px;
@@ -7184,6 +7184,10 @@ p[lang="ar"] {
 .media-image > .compose-media-grid-remove {
     width: 100%;
     height: 100%;
+}
+
+.column:first-of-type {
+    margin-left: 74px;
 }
 
 @media (max-width:900px){
