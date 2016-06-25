@@ -7168,7 +7168,7 @@ p[lang="ar"] {
 
 .app-columns:after {
     content: '';
-    width: 100vw;
+    width: 100%;
     position: relative;
     z-index: 1;
     display: inline-block;
