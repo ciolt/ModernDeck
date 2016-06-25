@@ -2227,14 +2227,24 @@ a .column-title-back .icon:after {
 }
 
 .attach-compose-buttons {
-	margin-right:-11px
+    margin-right: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 270px;
+    bottom: 0;
 }
 
 .attach-compose-buttons .tweet-button {
-	border-radius:0;
-	margin-top:-65px;
-	margin-left:-5px;
-	width:271px
+    border-radius: 0;
+    left: 0;
+    margin: 0;
+    top: 0;
+    bottom: 0;
+    transform: scale(1) !important;
+    right: 0;
+    position: absolute;
+    width: 100%;
 }
 
 .attach-compose-buttons .icon-compose-dm {
@@ -2973,9 +2983,9 @@ a .column-title-back .icon:after {
 }
 
 .compose-accounts {
-	padding-top:20px;
-	padding-left:19px;
-	padding-right:8px;
+	padding-top:32px;
+	padding-left:16px;
+	padding-right:16px;
 	display:inline-block
 }
 
@@ -4915,8 +4925,8 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 .tweet-button.is-hidden {
 	display:inline-block!important;
 	border-radius:0;
-	width:271px;
-	margin-left:-5px;
+	width:270px;
+	margin-left:-4px;
 	margin-top:-4px;
 	box-shadow:none!important
 }
@@ -5498,12 +5508,14 @@ fieldset .fixed-width-label:not(.radio),fieldset:not(.js-search-filter) .control
 	border-radius:2px;
 	position:relative;
 	top:-3em;
-	opacity:1;
-	filter:alpha(opacity=100);
+	opacity:0;
+	filter:alpha(opacity=0);
+	visibility: hidden;
 	pointer-events:auto;
 	padding:8px 12px;
 	min-height:0;
-	box-shadow:0 2px 5px 0 rgba(0,0,0,.16),0 2px 5px 0 rgba(0,0,0,.23)
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.16),
+				0 2px 5px 0 rgba(0,0,0,.23);
 }
 
 .more-tweets-btn:active,.more-tweets-btn:hover,.more-tweets-btn:focus {
@@ -5524,6 +5536,7 @@ fieldset .fixed-width-label:not(.radio),fieldset:not(.js-search-filter) .control
 .more-tweets-btn-container--visible .more-tweets-btn,.more-tweets-btn-container--loading .more-tweets-btn {
 	opacity:1;
 	filter:alpha(opacity=100);
+	visibility: visible;
 	top:20px
 }
 
@@ -5609,13 +5622,6 @@ fieldset .fixed-width-label:not(.radio),fieldset:not(.js-search-filter) .control
 
 .compose-media-grid-holder {
 	padding-bottom:45px!important
-}
-
-.js-hide-drawer:after {
-	top:0;
-	position:absolute;
-	width:100%;
-	margin-top:10px
 }
 
 fieldset .toggle-switch {
@@ -6730,10 +6736,9 @@ ul.tweet-stats:nth-child(2) {
 
 .toggle-switch-input:checked+.toggle-switch-label:before {
     background: currentColor;
-    color: #20C9DF;
 }
 
-/* universal default accent color CSS selector *//* dynamically now added via JavaScript
+/* DO NOT ADD THE COLOR HERE *//* AVAILABLE ON LINE-45 AT MTDinject.js
 
 .more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .spinner-layer, .spinner-default, a:not(.list-account):not(.js-column-back):not(.column-header-link):focus, .more-tweets-btn-container--loading .more-tweets-btn:before, .mtd-nd-header-image, .is-new .column-message:before, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative), .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .js-toggle-button:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .toggle-switch-input:checked+.toggle-switch-label:after, .js-column.is-new .column-header:after, a, a:not(.column-header-link):not(.js-column-back):not(.list-account):not(.account-selector-grid-mode):not(.account-link):hover, .calweek a:hover, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):before, .compose-send-button-success, .icon-follow-color, .tweet-actions.is-visible .icon-reply, #caltoday, .lst-profile a, .lst-profile a:hover, .lst-profile a:active, .toggle-switch-input:checked+.toggle-switch-label:before, .btn:focus, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .compose-content:after, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before,.btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-negative), input[type="checkbox"]:checked:before, input[type="radio"]:checked:before {
 	color: #49cad8;
@@ -7081,8 +7086,20 @@ p[lang="ar"] {
     content: '';
     position: absolute;
     bottom: -1px;
-    left: -100%;
-    right: -100%;
+    left: 0;
+    right: 0;
+	z-index: 8;
+    height: 1px;
+    box-shadow: 0 0 1.5rem 1.5rem currentColor;
+}
+
+.compose-content:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    z-index: 8;
+    right: 0;
     height: 1px;
     box-shadow: 0 0 1.5rem 1.5rem currentColor;
 }

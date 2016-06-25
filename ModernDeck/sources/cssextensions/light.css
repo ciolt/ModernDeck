@@ -610,11 +610,6 @@ textarea::placeholder
 	color:rgba(128,128,128,.5)!important
 }
 
-.prf-header
-{
-	background-color:#1FC0CF;
-}
-
 .lst-group .selected:active
 {
 	background:#58CDDB

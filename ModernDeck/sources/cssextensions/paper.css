@@ -9,12 +9,8 @@
 	border-color:#555!important
 }
 
-.more-tweets-btn,.mdl-header.js-mdl-header,.application,.mtd-back-paper.mtd-light .app-navigator .js-hide-drawer,.app-navigator .js-hide-drawer,.edit-conversation-name,.drawer-header,.column:not(.is-new) .column-message,body,.column-header,.column-header-temp,.app-columns:before {
+.more-tweets-btn,.mdl-header.js-mdl-header,.mtd-nd-header-image,.prf-header,.application,.mtd-back-paper.mtd-light .app-navigator .js-hide-drawer,.app-navigator .js-hide-drawer,.edit-conversation-name,.drawer-header,.column:not(.is-new) .column-message,body,.column-header,.column-header-temp,.app-columns:before {
 	background:#eee!important
-}
-
-.mtd-nd-header-image {
-	background-color:#eee!important
 }
 
 .is-options-open .column-settings-link {
