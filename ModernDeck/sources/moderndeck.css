@@ -1410,7 +1410,10 @@ a .column-title-back .icon:after {
 .stream-item {
 	margin-top:3px;
 	position: relative;
-	z-index: 1; /* important to allow :before color element appear */
+}
+
+.column-type-message .chirp-container .stream-item {
+    z-index: 1;
 }
 
 .stream-item.is-actionable:hover {
@@ -7154,18 +7157,6 @@ p[lang="ar"] {
 	font: inherit;
 }
 
-.app-columns:before {
-	content: '';
-	height: 54px;
-	padding: 0 10px;
-	line-height: 50px;
-	box-shadow: 0 1px 10px rgba(17,17,17,.35);
-	position: fixed;
-	left: 0;
-	right: 0;
-	top: 0;
-}
-
 .app-columns:after {
     content: '';
     width: 100%;
@@ -7207,6 +7198,31 @@ p[lang="ar"] {
 
 .column:first-of-type {
     margin-left: 74px;
+}
+
+.app-columns-container:before {
+    content: '';
+    height: 54px;
+    padding: 0 10px;
+    line-height: 50px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.app-columns-container:after {
+    content: '';
+    height: 10px;
+    padding: 0 10px;
+    line-height: 50px;
+    box-shadow: 0 1px 10px rgba(17,17,17,.35);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 44px;
+    z-index: 0;
 }
 
 @media (max-width:900px){
