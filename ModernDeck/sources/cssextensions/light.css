@@ -270,9 +270,8 @@ html .btd-grayscale_notification_icons i.icon.activity-indicator
 	background:#c9c9c9
 }
 
-.sprite:before
-{
-	color:#0EC5D5
+.sprite:before {
+	color: #FFF;
 }
 
 .status-message

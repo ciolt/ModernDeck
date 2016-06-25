@@ -857,12 +857,13 @@ i {
 }
 
 .sprite-close {
-	width:36px;
-	height:36px;
-	font-size:36px;
-	position:absolute;
-	right:0;
-	top:15px
+    width: 36px;
+    height: 36px;
+    font-size: 36px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 1;
 }
 
 .compose-media-grid-holder .sprite-close {
@@ -1407,11 +1408,17 @@ a .column-title-back .icon:after {
 }
 
 .stream-item {
-	margin-top:3px
+	margin-top:3px;
+	position: relative;
+	z-index: 1; /* important to allow :before color element appear */
 }
 
 .stream-item.is-actionable:hover {
 	box-shadow:0 2px 5px rgba(0,0,0,.4)
+}
+
+.stream-item:first-child {
+    margin-top: 0;
 }
 
 .item-box {
@@ -2220,7 +2227,18 @@ a .column-title-back .icon:after {
 }
 
 .tweet-button.is-hidden>i:before {
-	margin-left:108px;
+    content: "Compose Tweet";
+    font-family: inherit;
+    font-size: 1.25rem;
+    line-height: 40px;
+    margin-top: 0;
+    font-weight: 500;
+    height: 40px;
+    margin-left: 42px;
+    text-transform: capitalize;
+    width: auto;
+    white-space: nowrap;
+    overflow: hidden;
 	-webkit-transform:scale(1);
 	    -ms-transform:scale(1);
 	        transform:scale(1)
@@ -3099,8 +3117,8 @@ a .column-title-back .icon:after {
 
 .compose-media-grid-remove {
 	position:absolute;
-	top:2px;
-	right:3px
+	top:0;
+	right:0
 }
 
 .compose-media-bar-holder {
@@ -3115,8 +3133,8 @@ a .column-title-back .icon:after {
 
 .compose-media-bar-remove {
 	position:absolute;
-	top:14px;
-	right:14px
+	top:4px;
+	right:4px
 }
 
 .media-grid-container .compose-media-grid-remove .sprite-close {
@@ -4822,7 +4840,7 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 }
 
 .hide-detail-view-inline .column-navigator {
-	left:270px!important
+	left:320px!important
 }
 
 .hide-detail-view-inline .app-search-fake {
@@ -4932,7 +4950,8 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 }
 
 .is-hidden .icon-compose {
-	margin-left:10px
+	margin-left:10px;
+	margin-top:-10px
 }
 
 .js-save.block,.js-cancel.block {
@@ -5004,7 +5023,7 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 .hide-detail-view-inline .mtd-drawer-button {
 	top:5px;
 	z-index:7;
-	margin-left:212px
+	margin-left:270px
 }
 
 .mtd-nav-drawer {
@@ -6683,7 +6702,7 @@ ul.tweet-stats:nth-child(2) {
 /* In the themes, you can change the column header's accent color
  * by using these selectors and placing "color: foobar;" in it
  */
-.more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .more-tweets-btn-container--loading .more-tweets-btn:before, .is-new .column-message:before, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .js-column.is-new .column-header:after, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):after, .js-toggle-button:before {
+.more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .more-tweets-btn-container--loading .more-tweets-btn:before, .is-new .column-message:before, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .js-column.is-new .column-header:after, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):after, .js-toggle-button:before,.stream-item.is-actionable:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -6696,6 +6715,7 @@ ul.tweet-stats:nth-child(2) {
 	background-color: currentColor;
 	color: transparent;
 	z-index: -1;
+	transition: .75s color cubic-bezier(0.25, 1, 0.25, 1);
 }
 
 /* separates background to the :psuedo selectors, for better customizability */
@@ -7143,6 +7163,27 @@ p[lang="ar"] {
 	left: 0;
 	right: 0;
 	top: 0;
+}
+
+.media-image > .compose-media-grid-remove:before, .compose .js-media-added .compose-media-bar:before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    right: -1px;
+	box-sizing: border-box;
+	height: 1px;
+    width: 1px;
+    box-shadow: 0 0 64px 32px rgba(0, 0, 0, .75);
+}
+
+.media-image > .compose-media-grid-remove, .compose .js-media-added .compose-media-bar {
+    position: inherit;
+    overflow: hidden;
+    
+}
+.media-image > .compose-media-grid-remove {
+    width: 100%;
+    height: 100%;
 }
 
 @media (max-width:900px){
