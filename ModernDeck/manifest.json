@@ -5,6 +5,8 @@
   "version": "2016.06.25.3",
   "version_name": "6.1",
   "manifest_version": 2,
+
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjVmBV2xTA7TsLkrE4dKeMLWrYFmSgDmRayboNVgcr9mW+XJv5Fu3tR4Qhaxd9wqdeLOJmqymEKZy5Vz6K1T6SrPakc/7ezot5NFuAj78JTc1IE7sUma8Z829QB+ub11Nhf+8H/s4FDqLfvBHIUHh8T3IPcWhOx8pdc6Bds/DR5sK29w+Xq2PCRvZWf75dlLmhzz+jxblkBiRKhQ2U+qllqZVqcUcoCia+1ZCCZh53qsweu7wY+34rkHtPcuNl9o+VLK5H48g5XmAe1LHGozYfV2M9nYKe21KBe5RBYeQeHV3hZLcpSpWm+MRj/QrlXzT+Ov+ZE+kwLG1+ZrwwaLw6QIDAQAB",
   
   "permissions": [
     "webRequest",
@@ -34,7 +36,8 @@
       "24": "AppIcon24.png",
       "32": "AppIcon32.png",
       "48": "AppIcon48.png",
-      "64": "AppIcon64.png"
+      "64": "AppIcon64.png",
+      "128": "AppIcon64.png"
    },
 
   "web_accessible_resources": [

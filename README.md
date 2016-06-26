@@ -1,7 +1,7 @@
 
-# ModernDeck
+![ModernDeck Icon](Docs/Logos/Full/Icon 125x150.png)![ModernDeck Logo](Docs/Logos/Full/Text 465x150.png)
 
-An extension that customizes TweetDeck's interface to fit Material Design, while allowing for additional customization.
+A browser extension that customizes TweetDeck's interface to fit Material Design, while allowing for additional customization.
 
 [Follow us on Twitter](https://twitter.com/ModernDeck)
 
