@@ -2,7 +2,7 @@
   "name": "ModernDeck",
   "short_name": "ModernDeck",
   "description": "TweetDeck, just more beautiful, colourful, customisable, fast, and fun than ever.",
-  "version": "2016.06.25.3",
+  "version": "2016.06.26.1",
   "version_name": "6.1",
   "manifest_version": 2,
 
@@ -37,7 +37,8 @@
       "32": "AppIcon32.png",
       "48": "AppIcon48.png",
       "64": "AppIcon64.png",
-      "128": "AppIcon64.png"
+      "128": "AppIcon128.png",
+      "256": "AppIcon256.png"
    },
 
   "web_accessible_resources": [
@@ -47,7 +48,7 @@
   
   "browser_action": {
     "browser_style": false,
-    "default_icon": "sources/oneclick/InstaTweetDeck.png",
+    "default_icon": "AppIcon16.png",
     "default_title": "Launch TweetDeck",
     "default_popup": "extension/ITD.html"
   }
