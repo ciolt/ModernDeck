@@ -148,6 +148,8 @@ html.scroll-v {
 .needs-scroll-bottom-offset.scroll-styled-h {
 	bottom:4px;
 	overflow-y: hidden;
+	z-index: 1 !important;
+	left: 74px;
 }
 
 .l-table {
@@ -2121,8 +2123,9 @@ a .column-title-back .icon:after {
 
 .app-content {
 	top:40px;
+	left: 0;
 	margin-left:0;
-	overflow:visible
+	overflow:visible;
 }
 
 .is-chrome .app-columns-container {
@@ -2141,13 +2144,15 @@ a .column-title-back .icon:after {
 .app-nav-link {
 	font-size:18px;
 	cursor:pointer;
+	background-color: transparent !important;
 	margin-top:0!important;
 	width:48px;
 	height:30px;
+	margin-left: 12px;
 	top:0;
 	position:absolute;
 	opacity:0;
-	filter:alpha(opacity=0)
+	filter:alpha(opacity=0);
 }
 
 .app-nav-link i {
@@ -3637,13 +3642,7 @@ textarea,.l-fullwidth {
 	padding-top:30px
 }
 
-.is-new>.column-nav-updates.icon-dot {
-	right:0;
-	margin-top:5px;
-	position:absolute;
-	display:block;
-	margin-top:-26px
-}
+.is-new>.column-nav-updates.icon-dot {display: none;}
 
 .s-error input {
 	border-color:#a93730
@@ -4477,27 +4476,30 @@ input[type="radio"]:checked:before {
 
 .column-navigator {
 	position:absolute;
-	top:0;
-	left:100px;
-	bottom:0;
-	right:0;
-	overflow:visible;
+	top: 94px;
+	height: calc(100vh - 94px);
+	left: 0;
+	width: 74px;
+	z-index: 2;
+	overflow: hidden;
 	opacity:0;
-	filter:alpha(opacity=0)
+	filter:alpha(opacity=0);
 }
 
 .column-nav-link {
-	position:relative;
-	height:100%;
-	color:rgba(255,255,255,.5);
-	font-size:18px;
+	position: static;
+	color: inherit;
+	font-size: inherit;
 	cursor:pointer;
 	overflow:visible;
+	color: inherit !important;
+	padding: 0 !important;
 	-webkit-transform:none!important;
-	    -ms-transform:none!important;
-	        transform:none!important;
+	-ms-transform:none!important;
+	transform:none!important;
 	box-shadow:none;
-	top:0
+	top:0;
+	transition-delay: 0s;
 }
 
 .column-nav-link:focus,.column-nav-link:active {
@@ -4509,34 +4511,37 @@ input[type="radio"]:checked:before {
 }
 
 .column-nav-item {
-	position:relative!important;
-	width:0;
-	top:0!important;
-	left:0!important;
+	position: relative;
 	box-sizing:border-box;
-	color:rgba(255,255,255,.75);
-	display:inline-block;
-	left:initial!important;
-	box-shadow:none!important;
-	background:none;
-	-webkit-transform:translate3d(15px,0,0);
-	        transform:translate3d(15px,0,0);
-	opacity:0;
+	display: block;
+	width: 100%;
+	clear: both;
+	opacity: 1;
+	margin-bottom: 8px;
+	transition: color .26s cubic-bezier(.19,1,.22,1);
+	transition-delay: 0s;
+	font-size: 1.75rem;
+	text-align: center;
 	filter:alpha(opacity=0);
-	height:50%
+	height: 32px;
 }
 
-.column-navigator:hover .column-nav-item,.column-nav-item.is-new {
-	opacity:1;
-	filter:alpha(opacity=100);
-	width:40px
+.column-nav-item.is-new {
+    color: #FFF !important;
+    transition: .6s all cubic-bezier(.19,1,.22,1);
+    box-shadow: none;
 }
 
 .column-nav-link i {
-	padding-left:1px;
-	vertical-align:-.6em;
-	padding-right:5px;
-	padding-top:5px;
+	padding-left: 0;
+	padding-right: 0;
+	padding-top: 0;
+	font-size: inherit;
+	width: auto;
+	height: auto;
+	display: block;
+	line-height: 1.75rem;
+	vertical-align: middle;
 }
 
 .column-nav-link .attribution {
@@ -4844,7 +4849,7 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 }
 
 .hide-detail-view-inline .column-navigator {
-	left:320px!important
+	left: 270px!important;
 }
 
 .hide-detail-view-inline .app-search-fake {
@@ -5027,7 +5032,7 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 .hide-detail-view-inline .mtd-drawer-button {
 	top:5px;
 	z-index:7;
-	margin-left:270px
+	margin-left:282px
 }
 
 .mtd-nav-drawer {
@@ -5825,7 +5830,7 @@ button.mtd-no-transform-case {
 }
 
 .column-nav-item.is-new .obj-left {
-	margin-top:-30px;
+	margin-top: 0;
 }
 
 .lst-group li {
@@ -6706,7 +6711,7 @@ ul.tweet-stats:nth-child(2) {
 /* In the themes, you can change the column header's accent color
  * by using these selectors and placing "color: foobar;" in it
  */
-.more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .more-tweets-btn-container--loading .more-tweets-btn:before, .is-new .column-message:before, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .js-column.is-new .column-header:after, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):after, .js-toggle-button:before,.stream-item.is-actionable:before {
+.more-tweets-btn-container--visible .more-tweets-btn:before, .mdl .js-add-column:after, .js-search-results-footer>.js-add-column:after, .more-tweets-btn-container--loading .more-tweets-btn:before, .is-new .column-message:before, .btn-login[type="submit"]:before, .login-container .btn-positive:before, .more-tweets-btn:before, .is-unread:before, .more-tweets-btn:before, .compose:before, .js-show-drawer:before, .js-column .column-header:before, .js-column.is-new .column-header:after, .is-options-open .column-settings-link:before, .is-options-open .column-settings-link:before, .column-options:before, .column-options .button-tray:before, .column-options .button-tray:before, .column-options:before, .facet-type:before, .btn:not([disabled]):not(.is-disabled):not(.btn-options-tray):not(.mtd-nav-button):not(.btn-bg-negative):not(.btn-positive):after, .js-toggle-button:before, .stream-item.is-actionable:before, .column-nav-item.is-new:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -7196,11 +7201,7 @@ p[lang="ar"] {
     height: 100%;
 }
 
-.column:first-of-type {
-    margin-left: 74px;
-}
-
-.app-columns-container:before {
+.app-content:before,.app-columns:before {
     content: '';
     height: 54px;
     padding: 0 10px;
@@ -7223,6 +7224,49 @@ p[lang="ar"] {
     right: 0;
     top: 44px;
     z-index: 0;
+}
+
+.column-navigator:before {
+    content: '';
+    height: 10px;
+    padding: 0 10px;
+    line-height: 50px;
+    box-shadow: 0 1px 10px rgba(17,17,17,.35);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    z-index: 0;
+}
+
+#column-navigator {
+    box-sizing: border-box;
+    padding-top: 36px;
+}
+
+#column-navigator .js-column-nav-list {
+    overflow-y: overlay;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+#column-navigator .js-column-nav-list .js-int-scroller {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.column-nav-link > .obj-left {
+    float: none;
+}
+
+.column-nav-link i:before {
+    position: relative;
+    top: 3px;
+}
+
+.column-nav-item.is-new:hover {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .17);
 }
 
 @media (max-width:900px){

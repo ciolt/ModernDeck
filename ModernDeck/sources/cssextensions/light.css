@@ -748,3 +748,11 @@ textarea
 {
 	color:#787878
 }
+
+.column-nav-item:hover {
+    color: rgba(0, 0, 0, .42);
+}
+
+.column-nav-item {
+    color: rgba(0, 0, 0, .17);
+}

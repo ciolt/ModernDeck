@@ -142,12 +142,6 @@ a .column-title-back .icon:after
 	transition:.2s transform
 }
 
-.column-navigator:hover .column-nav-item,
-.column-nav-item.is-new
-{
-	transition:.2s all cubic-bezier(.19,1,.22,1),.4s transform
-}
-
 .toggle-switch .toggle-switch-label:before
 {
 	transition:all .2s ease-in-out
@@ -199,11 +193,6 @@ a .column-title-back .icon:after
 .numbered-badge
 {
 	transition:.3s all 2s
-}
-
-.column-nav-item
-{
-	transition:.4s all cubic-bezier(.19,1,.22,1) 1s
 }
 
 .js-modal[style="display:none;"]

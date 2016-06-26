@@ -5,6 +5,6 @@
   Released under the MIT Licence
 */
 
-.mdl-header.js-mdl-header,.app-columns-container:before,.mtd-nd-header-image,.prf-header,.application,.mtd-back-black.mtd-light .app-navigator .js-hide-drawer,.app-navigator .js-hide-drawer,.edit-conversation-name,.drawer-header,.column:not(.is-new) .column-message,body,.column-header,.app-columns:before {
+.mdl-header.js-mdl-header,.app-columns-container:before,.mtd-nd-header-image,.prf-header,.application,.mtd-back-black.mtd-light .app-navigator .js-hide-drawer,.app-navigator .js-hide-drawer,.edit-conversation-name,.drawer-header,.column:not(.is-new) .column-message,body,.column-header,.app-columns:before,.app-content:before {
 	background-color:#000!important
 }
