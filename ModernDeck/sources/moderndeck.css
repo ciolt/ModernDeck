@@ -417,7 +417,8 @@ i {
 	font-weight:400;
 	font-style:normal;
 	-webkit-font-smoothing:antialiased;
-	font-family:"Material"
+	font-family:"Material";
+	text-transform: lowercase;
 }
 
 .icon-twitter-bird:before,.icon-logout:before,.icon-tweetdeck:before,.icon-moderndeck:before,.icon-mtdmini:before,.icon-hashtag:before,.icon-settings:before,.icon-td-settings:before,.icon-retweet:before,.icon-mtd-settings:before,.icon-btd:before,.icon-btd-settings:before,.icon-quote-tweet:before,.icon-compose-grid:before,.icon-user-switch:before,.icon-user-switch:before,.icon-compose-minigrid:before,.icon-compose-list:before {
@@ -489,7 +490,7 @@ i {
 }
 
 .icon-keyboard:before {
-	content:"\e312"
+	content:"keyboard"
 }
 
 .icon-favorite:before {
@@ -497,15 +498,15 @@ i {
 }
 
 .icon-mention:before {
-	content:"\e0c9"
+	content:"message"
 }
 
 .icon-message:before {
-	content:"\e0bf"
+	content:"forum"
 }
 
 .icon-home:before {
-	content:"\e88a"
+	content:"home"
 }
 
 .icon-reply:before {
@@ -513,15 +514,15 @@ i {
 }
 
 .icon-drafts:before {
-	content:"\e151"
+	content:"drafts"
 }
 
 .icon-search:before {
-	content:"\e8B6"
+	content:"search"
 }
 
 .icon-trash:before,button.btn-options-tray[data-action="remove"]>.icon-close:before {
-	content:"\e872"
+	content:"delete"
 }
 
 .icon-close:before,.sprite-close:before {
@@ -529,20 +530,21 @@ i {
 }
 
 .icon-arrow-r:before {
-	content:"\e5c8"
+	content:"arrow_forward"
 }
 
 .tweet-button .icon-compose:after,.btn-back:before,.icon-arrow-l:before {
-	content:"\e5c4";
-	font-family:"Material"
+	content:"arrow_back";
+	font-family:"Material";
+	text-transform: lowercase;
 }
 
 .icon-protected:before {
-	content:"\e897"
+	content:"lock"
 }
 
 .icon-list:before {
-	content:"\e896"
+	content:"list"
 }
 
 .icon-camera:before {
@@ -554,105 +556,106 @@ i {
 }
 
 .icon-notifications:before {
-	content:"\e7f4"
+	content:"notifications"
 }
 
 .icon-activity:before {
-	content:"\e8e5"
+	content:"trending_up"
 }
 
 .icon-trending:before {
-	content:"\e80e"
+	content:"whatshot"
 }
 
 .icon-minus:before {
-	content:"\e15b"
+	content:"remove"
 }
 
 .icon-plus:before {
-	content:"\e145"
+	content:"add"
 }
 
 .icon-geo:before {
-	content:"\e0C8"
+	content:"location_on"
 }
 
 .sprite-translator:before,.icon-translator:before {
-	content:"\e80b"
+	content:"public"
 }
 
 .icon-check:before {
-	content:"\e5ca"
+	content:"check"
 }
 
 .icon-schedule:before {
-	content:"\e8b5"
+	content:"schedule"
 }
 
 .icon-user:before {
-	content:"\e7fd"
+	content:"person"
 }
 
 .icon-content:before {
-	content:"\e253"
+	content:"mode_comment"
 }
 
 .icon-arrow-d:before {
-	content:"\e313"
+	content:"keyboard_arrow_down"
 }
 
 .icon-arrow-u:before,.icon-pointer-u:before {
-	content:"\e5d8"
+	content:"arrow_upward"
 }
 
 .js-send-button:after {
 	content:"\e163";
 	font-family:"Material";
-	font-size:24px
+	font-size:24px;
+	text-transform: lowercase;
 }
 
 .icon-share:before {
-	content:"\e80d"
+	content:"share"
 }
 
 .icon-info:before {
-	content:"\e88f"
+	content:"info_outline"
 }
 
 .icon-verified:before,.sprite-verified:before,.sprite-verified-mini:before {
-	content:"\e8e8"
+	content:"verified_user"
 }
 
 .icon-blocked:before {
-	content:"\e14b"
+	content:"block"
 }
 
 .icon-constrain:before {
-	content:"\e8aa"
+	content:"picture-in-picture"
 }
 
 .icon-play-video:before {
-	content:"\e039"
+	content:"play_circle_outline"
 }
 
 .icon-clear-input:before {
-	content:"\e14c"
+	content:"clear"
 }
 
 .icon-compose:before,.icon-edit:before,.icon-compose-dm:before {
-	content:"\e150"
+	content:"create"
 }
 
 .icon-mark-read:before {
-	content:"\e877"
+	content:"done_all"
 }
 
 .icon-arrow-r-double:before {
-	content:"\e5da"
+	content:"subdirectory_arrow_right"
 }
 
 .icon-arrow-l-double:before {
-	content:"\e5d9"
+	content:"subdirectory_arrow_left"
 }
 
 .icon-follow:before {
@@ -660,7 +663,7 @@ i {
 }
 
 .icon-image:before {
-	content:"\e3f4"
+	content:"image"
 }
 
 .icon-popout:before {
@@ -668,32 +671,33 @@ i {
 }
 
 .icon-move:before {
-	content:"\e89f"
+	content:"open_with"
 }
 
 .recent-search-clear.list-item-last span:before,.icon-clear-timeline:before {
-	content:"\e0b8";
-	font-family:"Material"
+	content:"clear_all";
+	font-family:"Material";
+	text-transform: lowercase;
 }
 
 .icon-custom-timeline:before {
-	content:"\e431"
+	content:"collections_bookmark"
 }
 
 .icon-user-team-mgr:before {
-	content:"\e7fb"
+	content:"people"
 }
 
 .icon-conversation:before {
-	content:"\e0ca"
+	content:"chat_bubble"
 }
 
 .icon-link:before {
-	content:"\e157"
+	content:"link"
 }
 
 .icon-flash:before {
-	content:"\e3e7"
+	content:"flash_on"
 }
 
 .icon-analytics:before {
@@ -705,7 +709,8 @@ i {
 	font-size:26px;
 	font-weight:400;
 	font-family:"Material";
-	content:"\e5d2"
+	content:"menu";
+	text-transform: lowercase;
 }
 
 .mtd-nav-button i:before {
@@ -715,7 +720,7 @@ i {
 .mtd-nav-button i {
 	position: static;
 	left: 0px;
-	margin-top: 8px;
+	margin-top: 0;
 	margin-bottom:auto;
 	font-size: 27px;
 	text-indent: 0;
@@ -728,7 +733,7 @@ i {
 }
 
 .is-new>.icon-dot:before {
-	content:"\e031"
+	content:"new_releases"
 }
 
 .icon-xsmall {
@@ -847,7 +852,8 @@ i {
 
 .sprite:before {
 	font-family:"Material";
-	font-style:normal
+	font-style:normal;
+	text-transform: lowercase;
 }
 
 .sprite-translator,.sprite-verified {
@@ -3680,21 +3686,23 @@ input[type="checkbox"]:active {
 }
 
 input[type="checkbox"]:before {
-	content:"\e835";
-	font-family:"Material"
+	content:"check_box_outline_blank";
+	font-family:"Material";
+	text-transform: lowercase;
 }
 
 input[type="checkbox"]:checked:before {
-	content:"\e834"
+	content:"check_box"
 }
 
 input[type="radio"]:before {
-	content:"\e836";
-	font-family:"Material"
+	content:"radio_button_unchecked";
+	font-family:"Material";
+	text-transform: lowercase;
 }
 
 input[type="radio"]:checked:before {
-	content:"\e837"
+	content:"radio_button_checked"
 }
 
 .input-with-icon {
@@ -6686,13 +6694,14 @@ ul.tweet-stats:nth-child(2) {
 }
 
 .js-compose-stay-open:before {
-	content:"\e898"!important;
+	content:"lock_open" !important;
 	font-family:"Material";
+	text-transform: lowercase;
 	color:#fff!important
 }
 
 .js-compose-stay-open:checked:before {
-	content:"\e897"!important
+	content:"lock" !important
 }
 
 .account-selector-grid-mode:active,.js-compose-stay-open:active {
@@ -6878,6 +6887,7 @@ ul.tweet-stats:nth-child(2) {
 #account-safeguard-checkbox:before {
 	content:"\e835";
 	font-family:"Material";
+	text-transform: lowercase;
 	color:#fff
 }
 
@@ -7266,6 +7276,15 @@ p[lang="ar"] {
 
 .column-nav-item.is-new:hover {
     box-shadow: 0 3px 5px rgba(0, 0, 0, .17);
+}
+
+*:before, *:after {
+	letter-spacing: normal;
+	direction: ltr;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: 'liga';
 }
 
 @media (max-width:900px){
