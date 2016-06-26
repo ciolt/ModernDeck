@@ -233,8 +233,7 @@ function fontParseHelper(a) {
 	if (typeof a !== "object" || a === null)
 		throw "you forgot to pass the object";
 
-	return "@font-face{font-family:'"+(a.family||"Roboto")+"';font-style:"+(a.style||"normal")+";font-weight:"+(a.weight || "300")+";src:url("+MTDBaseURL+"sources/fonts/"+a.name+".woff) format('woff');unicode-range:"+(a.range||
-		"U+0100-024F,U+1E00-1EFF,U+20A0-20CF,U+2C60-2C7F,U+A720-A7FF")+"}";
+	return "@font-face{font-family:'"+(a.family||"Roboto")+"';font-style:"+(a.style||"normal")+";font-weight:"+(a.weight || "400")+";src:url("+MTDBaseURL+"sources/fonts/"+a.name+".woff) format('woff');}";
 }
 
 function MTDInit(){
@@ -269,9 +268,20 @@ function MTDInit(){
 		fontParseHelper({weight:"400",name:"Roboto400latinext"}) +
 		fontParseHelper({weight:"500",name:"Roboto500latin",range:"U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000"}) +
 		fontParseHelper({weight:"500",name:"Roboto500latinext"}) +
-		fontParseHelper({family:"Material",weight:"400",name:"MaterialIcons",range:"U+0000-F000"}) +
-		fontParseHelper({family:"MD",weight:"400",name:"mdvectors",range:"U+E000-FFFF"})
-		// fontParseHelper({family:"Font Awesome",weight:"400",name:"fontawesome",range:"U+0000-F000"})
+		fontParseHelper({family:"Material",weight:"400",name:"MaterialIcons"}) +
+		fontParseHelper({family:"MD",weight:"400",name:"mdvectors",range:"U+E000-FFFF"}) +
+		`@font-face {
+			font-family: 'Noto Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: url(${MTDBaseURL}sources/fonts/NotoSans-Regular.ttf) format('ttf');
+		}
+		@font-face {
+			font-family: 'Noto Sans';
+			font-style: normal;
+			font-weight: 500;
+			src: url(${MTDBaseURL}sources/fonts/NotoSans-Bold.ttf) format('ttf');
+		}`
 	));
 
 	document.querySelector(".js-modals-container").removeChild = function(rmnode){
