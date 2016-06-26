@@ -5206,6 +5206,7 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 	margin-right:auto;
 	margin-top: 0;
 	float: left;
+	font-size: 4rem;
 }
 
 .mtd-logo:before {
