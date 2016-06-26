@@ -201,8 +201,11 @@ function loadPreferences() {
 			);
 	}
 	
-	if (getPref("mtd_theme") !== "" && getPref("mtd_theme") !== null && typeof getPref("mtd_theme") !== "undefined")
+	if (getPref("mtd_theme") !== "" && getPref("mtd_theme") !== null && typeof getPref("mtd_theme") !== "undefined") {
 		enableStylesheetExtension(getPref("mtd_theme"));
+	} else {
+		enableStylesheetExtension("blue") // applies default theme color as blue on first run
+	}
 
 	if (getPref("mtd_scrollbar_style") !== "" && getPref("mtd_scrollbar_style") !== null && typeof getPref("mtd_scrollbar_style") !== "undefined")
 		enableStylesheetExtension(getPref("mtd_scrollbar_style"));
