@@ -2596,8 +2596,7 @@ a .column-title-back .icon:after {
 
 .mdl {
 	display:inline-block;
-	width: 40%;
-	min-width: 480px;
+	min-width: 580px;
 	max-width: 100vw;
 	text-align:left;
 	opacity:1;
