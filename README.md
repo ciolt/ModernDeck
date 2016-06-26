@@ -5,6 +5,12 @@ A browser extension that customizes TweetDeck's interface to fit Material Design
 
 [Follow us on Twitter](https://twitter.com/ModernDeck)
 
+# Contributing
+
+The _**BEST**_ way to contribute is to either open an issue or a pull request.
+
+Thanks to the development team avidly checking GitHub, we're able to rapidly work to fix any issues in ModernDeck.
+
 # Installation
 
 The ready-to-install extension is available in the [Releases](https://github.com/ciolt/ModernDeck/releases) tab.
