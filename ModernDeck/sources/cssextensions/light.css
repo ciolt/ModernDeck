@@ -430,9 +430,7 @@ html:not(.mtd-dark-media-previews) .med-tweet,
 
 .cal,
 .list-listmember .bio,
-.media-sensitive-title,
-.popover .js-column-back,
-.popover .js-column-detail .column-title-back:before
+.media-sensitive-title
 {
 	color:#666
 }
