@@ -2554,6 +2554,10 @@ a .column-title-back .icon:after {
 	display: block;
 }
 
+.column-type-message .numbered-badge {
+    line-height: 4;
+}
+
 .drawer {
 	position:absolute;
 	width:270px;
