@@ -146,7 +146,7 @@ html.scroll-v {
 }
 
 .needs-scroll-bottom-offset.scroll-styled-h {
-	bottom:4px;
+	bottom:0;
 	overflow-y: hidden;
 	z-index: 1 !important;
 	left: 74px;
@@ -996,7 +996,6 @@ button:hover,button:focus {
 
 .app-columns {
 	box-sizing:border-box;
-	padding-bottom:4px;
 	height:100%
 }
 
@@ -5054,8 +5053,7 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 }
 
 .mtd-nav-drawer {
-	width:320px;
-	width: 20rem;
+	width:20rem;
 	height:100%;
 	z-index:6;
 	position:absolute;
@@ -5065,7 +5063,7 @@ a[rel=user]:active,.card-holder a[rel=mediaPreview]:active {
 }
 
 .mtd-nav-drawer-hidden {
-	margin-left:-320px
+	margin-left:-20rem
 }
 
 .mtd-nav-drawer-background {
@@ -6757,7 +6755,7 @@ ul.tweet-stats:nth-child(2) {
 	background: transparent;
 	-webkit-transition: background-image 250ms ease;
 	        transition: background-image 250ms ease;
-	z-index: -1;
+	z-index: -2;
 }
 
 .js-column.is-new .column-header:after {
@@ -7187,7 +7185,7 @@ p[lang="ar"] {
 
 .app-columns:after {
     content: '';
-    width: 100%;
+    width: 50%;
     position: relative;
     z-index: 1;
     display: inline-block;
@@ -7249,6 +7247,10 @@ p[lang="ar"] {
     z-index: 0;
 }
 
+.app-columns-container {
+	left: 74px;
+}
+
 .column-navigator:before {
     content: '';
     height: 10px;
@@ -7299,6 +7301,10 @@ p[lang="ar"] {
 	text-rendering: optimizeLegibility;
 	-moz-osx-font-smoothing: grayscale;
 	font-feature-settings: 'liga';
+}
+
+.hide-detail-view-inline #column-navigator {
+    padding-top: 16px;
 }
 
 @media (max-width:900px){

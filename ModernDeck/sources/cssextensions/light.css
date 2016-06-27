@@ -255,7 +255,7 @@ html .btd-grayscale_notification_icons i.icon.activity-indicator
 .scroll-alt::-webkit-scrollbar-thumb,
 .s-tall-fixed::-webkit-scrollbar-thumb
 {
-	border-radius:5px;
+	border-radius:0px;
 	background:#D9D9D9
 }
 
