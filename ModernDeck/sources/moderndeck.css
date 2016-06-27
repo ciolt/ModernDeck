@@ -576,7 +576,7 @@ i {
 }
 
 .icon-geo:before {
-	content:"location_on"
+	content:"\e0c8"
 }
 
 .sprite-translator:before,.icon-translator:before {
@@ -1724,12 +1724,13 @@ a .column-title-back .icon:after {
 
 .media-size-large,.media-size-large-height {
 	max-height:310px;
+	overflow: hidden;
 	min-height:150px
 }
 
 .is-narrow-columns .media-size-large {
-	max-height:270px;
-	min-height:150px
+	min-height:150px;
+	overflow: hidden;
 }
 
 .is-narrow-columns .media-size-medium {
