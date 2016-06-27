@@ -2554,7 +2554,7 @@ a .column-title-back .icon:after {
 }
 
 .column-type-message .numbered-badge {
-    line-height: 4;
+    display: none;
 }
 
 .drawer {
