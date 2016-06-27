@@ -4525,13 +4525,11 @@ input[type="radio"]:checked:before {
 	width: 100%;
 	clear: both;
 	opacity: 1;
-	margin-bottom: 8px;
 	transition: color .26s cubic-bezier(.19,1,.22,1);
 	transition-delay: 0s;
 	font-size: 1.75rem;
 	text-align: center;
-	filter:alpha(opacity=0);
-	height: 32px;
+	height: 48px;
 }
 
 .column-nav-item.is-new {
@@ -4548,7 +4546,7 @@ input[type="radio"]:checked:before {
 	width: auto;
 	height: auto;
 	display: block;
-	line-height: 1.75rem;
+	line-height: 43px;
 	vertical-align: middle;
 }
 
@@ -6751,11 +6749,13 @@ ul.tweet-stats:nth-child(2) {
 }
 
 .js-column.is-new .column-header:after {
-	background: -webkit-linear-gradient(rgba(255,255,255,0), currentColor);
-	background: linear-gradient(rgba(255,255,255,0), currentColor);
 	z-index: -2;
-	-webkit-transition: background-image 250ms ease;
-	        transition: background-image 250ms ease;
+    border-bottom: 3px solid currentColor;
+    box-sizing: border-box;
+    background: transparent;
+    margin-left: 14px;
+    height: 51px;
+    width: 24px;
 }
 
 .js-show-drawer:before, .app-content.is-open .compose:before, .prf-header:before {
