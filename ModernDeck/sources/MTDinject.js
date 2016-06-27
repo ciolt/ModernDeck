@@ -433,7 +433,7 @@ function PrefsListener() {
 		if ($("#mtd-theme-control option:selected").length > 0 && localStorage.mtd_theme !== $("#mtd-theme-control option:selected").val()) {
 			disableStylesheetExtension(getPref("mtd_theme"));
 			setPref("mtd_theme",$("#mtd-theme-control option:selected").val())
-			enableStylesheetExtension($("#mtd-theme-control option:selected").val() || "default");
+			enableStylesheetExtension($("#mtd-theme-control option:selected").val() || "blue");
 		}
 
 		if (localStorage.mtd_theme_color !== $("#mtd-theme-color-control option:selected").val()) {
@@ -496,7 +496,6 @@ function MTDSettings() {
 									</label>
 									<label class="control-label">Theme
 										<select id="mtd-theme-control" type="select">
-											<option value="default" selected="selected">Default</option>
 											<optgroup label="Complete Themes">
 												<option value="paper">Paper</option>
 												<option value="amoled">AMOLED</option>
@@ -512,7 +511,7 @@ function MTDSettings() {
 												<option value="yellow"	>Yellow		</option>
 												<option value="cyan"	>Cyan		</option>
 												<option value="black"	>Black		</option>
-												<option value="blue"	>Blue		</option>
+												<option value="blue" selected="selected">Blue</option>
 											</optgroup>
 										</select>
 									</label>
