@@ -2529,21 +2529,29 @@ a .column-title-back .icon:after {
 }
 
 .numbered-badge {
-	position:absolute;
-	top:9px;
-	right:-2px;
-	padding:2px 3px;
-	visibility:hidden;
-	border:0;
-	font-weight:400;
-	font-style:normal;
-	margin-top:0;
-	font-size:12px;
-	width:1px;
-	height:3px;
-	margin-right:5px;
-	opacity:0;
-	filter:alpha(opacity=0)
+    position: static;
+    top: 0;
+    padding: 0;
+    line-height: 48px;
+    visibility: hidden;
+    border: 0;
+    font-weight: 600;
+    font-style: normal;
+	display: none;
+    margin-top: 0;
+    font-size: 16px;
+    color: inherit;
+    float: right;
+    width: 32px;
+    text-align: left;
+    height: auto;
+    margin-right: 0;
+    transition-delay: 0s;
+    transition: inherit;
+}
+
+.numbered-badge.is-visible {
+	display: block;
 }
 
 .drawer {
