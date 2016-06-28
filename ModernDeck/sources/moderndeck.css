@@ -1177,10 +1177,11 @@ button:hover,button:focus {
 	height:100%;
 	padding-left:3px!important;
 	position:absolute;
-	width:100%;
+	width:80%;
 	padding-top:5px;
 	margin-left:0!important;
-	margin-top:-2px!important
+	margin-top:-2px!important;
+	overflow: hidden;
 }
 
 .mdl .column-title {
@@ -7215,7 +7216,7 @@ p[lang="ar"] {
 .media-image > .compose-media-grid-remove, .compose .js-media-added .compose-media-bar {
     position: inherit;
     overflow: hidden;
-    
+
 }
 .media-image > .compose-media-grid-remove {
     width: 100%;
