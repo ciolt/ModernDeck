@@ -6,6 +6,6 @@
 */
 
 html {
-  -webkit-filter:grayscale(100%);
-  -moz-filter:grayscale(100%)
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%)
 }

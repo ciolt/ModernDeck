@@ -6,40 +6,39 @@
 */
 
 .media-sensitive-content p {
-    font-size:0
+  font-size: 0
 }
 
 .media-sensitive-content p:before {
-    font-size:12px;
-    content:"Click here to open this photo anyways"
+  font-size: 12px;
+  content: "Click here to open this photo anyways"
 }
 
 .mdl .chirp-container .media-sensitive-content p:before {
-    font-size:12px;
-    content:"Open details of this tweet to view this media."
+  font-size: 12px;
+  content: "Open details of this tweet to view this media."
 }
 
 .mdl .chirp-container .media-sensitive-content {
-    left:40%
+  left: 40%
 }
 
 .media-sensitive-content a {
-    display:none
+  display: none
 }
 
-.media-item.is-invisible,.media-item,.mdl .chirp-container .media-sensitive {
-    visibility:visible!important
+.media-item.is-invisible, .media-item, .mdl .chirp-container .media-sensitive {
+  visibility: visible!important
 }
 
 .mdl .media-sensitive {
-    visibility:hidden!important
+  visibility: hidden!important
 }
 
-
 .media-sensitive {
-    pointer-events:none
+  pointer-events: none
 }
 
 .media-sensitive-content {
-    padding-top:40px!important
+  padding-top: 40px!important
 }

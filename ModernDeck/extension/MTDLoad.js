@@ -10,7 +10,7 @@ var isChromium = typeof chrome.loadTimes !== "undefined"; // NOTE TO SELF: This 
 var isSafari = typeof safari !== "undefined";
 var isFirefox = !isChromium && !isSafari && !isApp;
 var storage = {};
-var electron,app,BrowserWindow,mainWindow;
+var electron, app, BrowserWindow, mainWindow;
 
 if (isApp) {
 
@@ -18,8 +18,13 @@ if (isApp) {
   app = electron.app;
   BrowserWindow = electron.BrowserWindow;
 
-  app.on('ready',function(){
-    mainWindow = new BrowserWindow({width: 1280, height: 720, autoHideMenuBar: true, frame:true});
+  app.on('ready', function() {
+    mainWindow = new BrowserWindow({
+      width: 1280,
+      height: 720,
+      autoHideMenuBar: true,
+      frame: true
+    });
 
     mainWindow.loadURL('file://' + __dirname + '../../../index.html');
 
@@ -70,7 +75,7 @@ var InjectScript = document.createElement("script");
 
 function MTDURLExchange(url) {
   var injurl = document.createElement("div");
-  injurl.setAttribute("type",url);
+  injurl.setAttribute("type", url);
   injurl.id = "MTDURLExchange";
   document.head.appendChild(injurl);
   console.log("injected url exchange with id " + injurl.id);
@@ -100,11 +105,13 @@ chrome.runtime.onMessage.addListener(function(m) {
 
 window.addEventListener("message", function(event) {
   if (event.source == window &&
-      event.data.type) {
+    event.data.type) {
     if (event.data.type == "setStorage") {
-      chrome.runtime.sendMessage({"name": "setStorage", "content": event.data.message});
-    }
-    else if (event.data.type == "getStorage") {
+      chrome.runtime.sendMessage({
+        "name": "setStorage",
+        "content": event.data.message
+      });
+    } else if (event.data.type == "getStorage") {
       window.postMessage({
         type: "sendStorage",
         message: storage

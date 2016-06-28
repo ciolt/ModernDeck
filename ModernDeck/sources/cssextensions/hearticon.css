@@ -6,21 +6,17 @@
 */
 
 .icon-favorite:before {
-    content:"\e87d"
+  content: "\e87d"
 }
 
 .is-favorite .tweet-dogear {
-	background:#e91e63
+  background: #e91e63
 }
 
-.txt-r-deep-yellow,
-.is-favorite .icon-favorite-toggle,
-.btn:not(.btn-fav-fav-text)>.icon-favorite-color,
-.obj-left>.icon-favorite-color
-{
-	color:#e91e63
+.txt-r-deep-yellow, .is-favorite .icon-favorite-toggle, .btn:not(.btn-fav-fav-text)>.icon-favorite-color, .obj-left>.icon-favorite-color {
+  color: #e91e63
 }
 
-.anim-bounce-in.tweet-action[rel="favorite"] i,.anim-bounce-in.tweet-detail-action[rel="favorite"] i {
-	transform:rotate(0deg)
+.anim-bounce-in.tweet-action[rel="favorite"] i, .anim-bounce-in.tweet-detail-action[rel="favorite"] i {
+  transform: rotate(0deg)
 }
