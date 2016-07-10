@@ -2,7 +2,7 @@
 			moderndeck.css
 
 
-			ModernDeck 6.0 [codename Utopian Paradise]
+			ModernDeck 6.1 [codename Sweet Paradise]
 			Copyright 2014-2016 Ryan Dolan (@dangeredwolf)
 			Released under the MIT Licence
 
@@ -722,10 +722,10 @@ i {
 	left: 0px;
 	margin-top: 0;
 	margin-bottom:auto;
-	font-size: 27px;
 	text-indent: 0;
 	margin-right:16px;
 	margin-right: 1rem;
+	font-size: 24px;
 }
 
 .mtd-nav-button .icon-keyboard,.mtd-nav-button .icon-plus {
@@ -2132,6 +2132,7 @@ a .column-title-back .icon:after {
 	left: 0;
 	margin-left:0;
 	overflow:visible;
+	transform: translateX(0%)
 }
 
 .is-chrome .app-columns-container {
@@ -2707,7 +2708,18 @@ a .column-title-back .icon:after {
 	font-size:28px;
 	padding-left:10px;
 	padding-right:10px;
-	font-weight:300
+	font-weight:300;
+	pointer-events:none
+}
+
+.mdl-placeholder>*::selection {
+	background:transparent;
+	color:inherit
+}
+
+.mdl-placeholder>*::-moz-selection {
+	background:transparent;
+	color:inherit
 }
 
 .mdl-column {
@@ -2791,7 +2803,8 @@ a .column-title-back .icon:after {
 	text-align:left;
 	margin-left:24px;
 	margin-right:0;
-	margin-bottom:15px
+	margin-bottom:15px;
+	transition:.2s all
 }
 
 .lst-launcher .btn i {
@@ -5563,6 +5576,10 @@ fieldset .fixed-width-label:not(.radio),fieldset:not(.js-search-filter) .control
 				0 2px 5px 0 rgba(0,0,0,.23);
 }
 
+.mdl .more-tweets-btn {
+	top:-5.75em
+}
+
 .more-tweets-btn:active,.more-tweets-btn:hover,.more-tweets-btn:focus {
 	box-shadow:0 2px 10px 0 rgba(0,0,0,.16),0 8px 10px 0 rgba(0,0,0,.23)
 }
@@ -7089,8 +7106,13 @@ input[type="button"] {
 	border-bottom:0
 }
 
-p[lang="ar"] {
-	direction:rtl
+[lang="ar"],[lang="fa"],[lang="ha"],[lang="he"],[lang="ks"],[lang="ku"],[lang="ps"],[lang="ur"],[lang="yi"] {
+    direction: rtl
+}
+
+[lang="ar"] a[rel="hashtag"],[lang="ar"] a[rel="user"],[lang="fa"] a[rel="hashtag"],[lang="fa"] a[rel="user"],[lang="ha"] a[rel="hashtag"],[lang="ha"] a[rel="user"],[lang="he"] a[rel="hashtag"],[lang="he"] a[rel="user"],[lang="ks"] a[rel="hashtag"],[lang="ks"] a[rel="user"],[lang="ku"] a[rel="hashtag"],[lang="ku"] a[rel="user"],[lang="ps"] a[rel="hashtag"],[lang="ps"] a[rel="user"],[lang="ur"] a[rel="hashtag"],[lang="ur"] a[rel="user"],[lang="yi"] a[rel="hashtag"],[lang="yi"] a[rel="user"] {
+    direction: ltr;
+    unicode-bidi: isolate
 }
 
 .contributor-row .account-summary-text {
@@ -7339,4 +7361,8 @@ p[lang="ar"] {
  .prf .lst-profile li:nth-child(5){
   width:26%
  }
+}
+
+.mdl .column-scroller {
+	top:0!important
 }
