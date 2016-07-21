@@ -1,4 +1,7 @@
 
+> **AS OF JULY 21, 2016, THIS PROJECT IS NO LONGER BEING MAINTAINED**  
+> **USE AT YOUR OWN RISK!**
+
 ![ModernDeck Icon](Docs/Logos/Full/Icon 125x150.png)![ModernDeck Logo](Docs/Logos/Full/Text 465x150.png)
 
 A browser extension that customizes TweetDeck's interface to fit Material Design, while allowing for additional customization.
